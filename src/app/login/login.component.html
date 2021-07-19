@@ -1,0 +1,83 @@
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./photo/secondpage.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./photo/thirdpage.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+
+<div class="container">
+    <h1>{{aim}}</h1> 
+    <!-- String binding from component to view
+    it must be string
+and the string must given inside doublr curly braces -->
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <h1 style="color: blue;">Customer Login</h1>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+<div >
+    <div class="col-4 container">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <input type="text" id="accnum" (change)="AccNum($event)" placeholder="Account Number" [value]="acno">
+            <!-- binding the property
+            here we are binding value property. we should give property name insde square bracket
+        propert = string name -->
+        </div><br>
+        <div class="col-4"></div>
+    </div>
+    <div class="col-4 container">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <input type="password" id="password" placeholder="Enter Password" (change)="Accpwd($event)"><br>
+            <div class="col-4"></div><br>
+            <button class="btn btn-success" (click)="login()">Login</button>
+        </div>
+    </div>
+</div>
+<div class="container col-8" style="display: flex;">
+    <div class="card" style="width: 18rem;">
+        <img src="./photo/transfer_money.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Transfer Money</h5>
+          <p class="card-text">Pay your maid's, driver's salary, society maintenance or transfer money to your friends & family through NEFT, RTGS or IMPS.</p>
+          <a href="#" class="btn btn-primary">Know more</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="./photo/pay_bills.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Pay Bills</h5>
+          <p class="card-text">Pay your electricity, mobile, gas, water & DTH bills. Recharge your pre-paid mobile number.</p>
+          <a href="#" class="btn btn-primary">Know more</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="./photo/shop_online.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Shop Online</h5>
+          <p class="card-text">Shop online for fashion, food, travel & entertainment.</p>
+          <a href="#" class="btn btn-primary">Know more</a>
+        </div>
+      </div>
+</div>
