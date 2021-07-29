@@ -28,10 +28,11 @@ export class DashboardComponent implements OnInit {
     pwd1: ['', [Validators.required, Validators.pattern('[a-zA-Z0-9]*')]],
     Amount1: ['', [Validators.required, Validators.pattern('[0-9]*')]]
   })
-
+  
+  user = this.ds.currentuser;
   constructor(private ds: DataService, private fb: FormBuilder) { }
 
-  user = this.ds.currentuser;
+ 
  
   
 

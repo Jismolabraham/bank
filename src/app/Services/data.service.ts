@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class DataService {
   currentuser=""
+  currentacc=""
   users :any= {
     1000: {accno:1000,password:"bala", username:"bala",balance:50000,transaction:[]},
     1001: {accno:1001,password:"Kiran", username:"kiran",balance:40000,transaction:[]},
@@ -13,7 +14,7 @@ export class DataService {
   }
 
   constructor() {
-    this.getdetails()
+    // this.getdetails()
    }
 
   savedetails()
@@ -23,6 +24,11 @@ export class DataService {
     {
       localStorage.setItem("currentuser", JSON.stringify(this.currentuser))
     }
+    if(this.currentacc)
+    {
+      localStorage.setItem("currentacc", JSON.stringify(this.currentacc))
+    }
+    
   }
 getdetails()
 {
@@ -34,11 +40,16 @@ getdetails()
   {
     this.currentuser=JSON.parse(localStorage.getItem("currentuser")|| '')
   }
+  if(this.currentacc)
+  {
+    this.currentacc=JSON.parse(localStorage.getItem("currentacc")|| '')
+  }
 }
 
 gettransaction()
 {
-  
+// return "helloxfxcgfcgd"
+ return this.users[this.currentacc].transaction
 }
   register(accno:any,password:any,username:any)
   {
@@ -61,13 +72,15 @@ gettransaction()
   login(no:any,pass:any)
   {
     var accdetails=this.users;
-    console.log(no);
+    // console.log(no);
     
     if(no in this.users)
     {
       if(pass==accdetails[no]["password"])
       {
         this.currentuser=accdetails[no]["username"]
+        this.currentacc=no;
+
         this.savedetails()
         return true
        

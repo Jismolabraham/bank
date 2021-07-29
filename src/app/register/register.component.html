@@ -16,7 +16,7 @@
                     </div>
                     <div *ngIf="( this.registerform.get('pwd')?.touched || this.registerform.get('pwd')?.dirty ) && this.registerform.get('pwd')?.errors" class="error">invalid password</div>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" id="pwd" name="uname" formControlName="uname" placeholder="Username"
+                        <input type="text" class="form-control" id="pwd1" name="uname" formControlName="uname" placeholder="Username"
                             aria-label="password" aria-describedby="basic-addon2">
                     </div>
                     <div *ngIf="( this.registerform.get('uname')?.touched || this.registerform.get('uname')?.dirty ) && this.registerform.get('uname')?.errors" class="error">invalid username</div>

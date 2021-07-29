@@ -8,11 +8,11 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th>1000</th>
-                <th>Credit</th>
+            <tr *ngFor="let transaction of transactions">
+                <th>{{transaction.amount}}</th>
+                <th>{{transaction.type}}</th>
             </tr>
         </tbody>
     </table>
-    <a routerLink="/dashboard">Home</a>
+    <!-- <a routerLink="/dashboard">Home</a> -->
 </body>

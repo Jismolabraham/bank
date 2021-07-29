@@ -9,7 +9,7 @@
                 <form [formGroup]="depositform" (ngSubmit)="Deposit()">
 
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" name="acno" id="uname" formControlName="ano" placeholder="Account num"
+                        <input type="text" class="form-control" name="acno" id="accnum" formControlName="ano" placeholder="Account num"
                             aria-label="Recipient's username" aria-describedby="basic-addon2">
                     </div>
                     <div class="erroracc" *ngIf="( this.depositform.get('ano')?.touched || this.depositform.get('ano')?.dirty ) && this.depositform.get('ano')?.errors" >*Invalid account number</div>
@@ -21,7 +21,7 @@
                     <div class="erroracc" *ngIf="( this.depositform.get('pwd')?.touched || this.depositform.get('pwd')?.dirty ) && this.depositform.get('pwd')?.errors" >*Invalid pwd</div>
 
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" id="pwd" name="Amount" formControlName="Amount" placeholder="Username"
+                        <input type="text" class="form-control" id="uname" name="Amount" formControlName="Amount" placeholder="Username"
                             aria-label="password" aria-describedby="basic-addon2">
                     </div>
                     <div class="erroracc" *ngIf="( this.depositform.get('Amount')?.touched || this.depositform.get('Amount')?.dirty ) && this.depositform.get('Amount')?.errors" >*Incorrect amount</div>
@@ -65,21 +65,21 @@
                 <form [formGroup]="withdrawform" (ngSubmit)="Withdraw()">
 
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" name="acno" id="uname" formControlName="ano1" placeholder="username"
+                        <input type="text" class="form-control" name="acno" id="accno1" formControlName="ano1" placeholder="username"
                             aria-label="Recipient's username" aria-describedby="basic-addon2">
 
                     </div>
                     <div class="erroracc" *ngIf="( this.withdrawform.get('ano1')?.touched || this.withdrawform.get('ano1')?.dirty ) && this.withdrawform.get('ano1')?.errors" >*Invalid account number</div>
 
                     <div class="input-group mb-3">
-                        <input type="password" class="form-control" name ="pass" id="pwd" formControlName="pwd1" placeholder="password"
+                        <input type="password" class="form-control" name ="pass" id="pwd1" formControlName="pwd1" placeholder="password"
                             aria-label="password" aria-describedby="basic-addon2">
 
                     </div>
                     <div class="erroracc" *ngIf="( this.withdrawform.get('pwd1')?.touched || this.withdrawform.get('pwd1')?.dirty ) && this.withdrawform.get('pwd1')?.errors" >*Invalid pwd</div>
 
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" id="pwd" name="Amount" formControlName="Amount1" placeholder="Username"
+                        <input type="text" class="form-control" id="amount1" name="Amount1" formControlName="Amount1" placeholder="Username"
                             aria-label="password" aria-describedby="basic-addon2">
                     </div>
                     <div class="input-group mb-3">
