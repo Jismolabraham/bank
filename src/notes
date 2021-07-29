@@ -1,0 +1,5 @@
+services-----there is no view
+src-app-make service file------ ng g s (name)data
+login class-cut database-paste in service.ts
+property inkjection------login class- construct- private (variable name(ds)):data serice.
+now all the properties of dataservice will be there in ds object.

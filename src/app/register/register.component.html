@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="login-div">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col" style=" background-color: white; border: 2px solid black;;">
+                <h2 style="text-align: center; color: darkslategrey;">Register</h2>
+                <form [formGroup]="registerform" (ngSubmit)="Register()">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" name="acno" id="uname" formControlName="ano" placeholder="username"
+                            aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    </div>
+                    <div *ngIf="( this.registerform.get('ano')?.touched || this.registerform.get('ano')?.dirty ) && this.registerform.get('ano')?.errors" class="error">invalid account number</div>
+                    <div class="input-group mb-3">
+                        <input type="password" class="form-control" name ="pass" id="pwd" formControlName="pwd" placeholder="password"
+                            aria-label="password" aria-describedby="basic-addon2">
+                    </div>
+                    <div *ngIf="( this.registerform.get('pwd')?.touched || this.registerform.get('pwd')?.dirty ) && this.registerform.get('pwd')?.errors" class="error">invalid password</div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="pwd" name="uname" formControlName="uname" placeholder="Username"
+                            aria-label="password" aria-describedby="basic-addon2">
+                    </div>
+                    <div *ngIf="( this.registerform.get('uname')?.touched || this.registerform.get('uname')?.dirty ) && this.registerform.get('uname')?.errors" class="error">invalid username</div>
+                    <div class="input-group mb-3">
+                        <p style="color: red;" id="error"></p>
+                    </div>
+                    <div class="input-group mb-3 login-btn-center">
+                        <button type="submit" class="btn btn-primary">Register</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+</div>
+<!-- directives- always use in dom or html page -->

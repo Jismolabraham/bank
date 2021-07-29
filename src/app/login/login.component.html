@@ -35,26 +35,33 @@ and the string must given inside doublr curly braces -->
         <div class="col-4"></div>
     </div>
 </div>
+<form [formGroup]="loginform" (ngSubmit)="login()">
 <div >
     <div class="col-4 container">
         <div class="col-4"></div>
         <div class="col-4">
-            <input type="text" id="accnum" (change)="AccNum($event)" placeholder="Account Number" [value]="acno">
+            <input type="text" id="accnum" name="acno" placeholder="Account Number" formControlName="ano">
             <!-- binding the property
             here we are binding value property. we should give property name insde square bracket
         propert = string name -->
+        <div class="erroracc" *ngIf="( this.loginform.get('ano')?.touched || this.loginform.get('ano')?.dirty ) && this.loginform.get('ano')?.errors" >*Invalid account number</div>
         </div><br>
         <div class="col-4"></div>
     </div>
+    
     <div class="col-4 container">
         <div class="col-4"></div>
         <div class="col-4">
-            <input type="password" id="password" placeholder="Enter Password" (change)="Accpwd($event)"><br>
+            <input type="password" id="password" name="pass" placeholder="Enter Password" formControlName="pwd"><br>
+            <div class="erroracc" *ngIf="( this.loginform.get('pwd')?.touched || this.loginform.get('pwd')?.dirty ) && this.loginform.get('pwd')?.errors" >*Invalid password</div>
+
             <div class="col-4"></div><br>
-            <button class="btn btn-success" (click)="login()">Login</button>
+            <button class="btn btn-success" type="submit">Login</button>
         </div>
+        <a routerLink="register">Sign in</a>
     </div>
 </div>
+</form>
 <div class="container col-8" style="display: flex;">
     <div class="card" style="width: 18rem;">
         <img src="./photo/transfer_money.png" class="card-img-top" alt="...">
